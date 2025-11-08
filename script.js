@@ -11,7 +11,8 @@ function formatTime(date) {
 function formatAzimuth(rad) {
   if (rad === undefined) return "なし";
   const deg = (rad * 180 / Math.PI + 180) % 360;
-  return `${deg.toFixed(1)}°（${azimuthToDirection(deg)}）`;
+  const direction = azimuthToDirection(deg);
+  return `${deg.toFixed(1)}°<br><small>${direction}</small>`;
 }
 
 function azimuthToDirection(deg) {
