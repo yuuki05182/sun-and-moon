@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>東京の月と太陽の出入り（リアルタイム）</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://unpkg.com/suncalc@1.9.0/suncalc.js"></script>
+  <script defer src="script.js"></script>
+  <style>
+    body {
+      font-family: "Helvetica Neue", sans-serif;
+      max-width: 720px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: #f9f9f9;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.6rem;
+      text-align: center;
+    }
+    th {
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌕 東京の月と太陽の出入り</h1>
+  <div id="info">
+    <p><strong>現在時刻:</strong> <span id="now">読み込み中...</span></p>
+    <p><strong>月齢:</strong> <span id="moon-age">-</span> 日</p>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>現象</th>
+        <th>今日</th>
+        <th>方位角</th>
+        <th>翌日</th>
+        <th>方位角</th>
+      </tr>
+    </thead>
+    <tbody id="data-body">
+      <!-- JSが埋め込みます -->
+    </tbody>
+  </table>
+</body>
+</html>
